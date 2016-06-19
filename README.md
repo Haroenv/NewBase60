@@ -19,11 +19,6 @@ NumToBase60.SxgToDate("38i")
 NumToBase60.SxgToISO("37j")
 ```
 
-## Requirements
-
-- iOS 8.0 and above
-- Xcode 7.0 and above
-
 ## Installation
 
 ### Carthage
@@ -46,6 +41,8 @@ pod "NewBase60"
 ## Author
 
 [@Haroenv](https://github.com/Haroenv)
+
+Note: this is the first Swift Package I created. Help is very welcome
 
 ## License
 

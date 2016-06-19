@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double NewBase60VersionNumber;
 FOUNDATION_EXPORT const unsigned char NewBase60VersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <NewBase60/PublicHeader.h>
-
-

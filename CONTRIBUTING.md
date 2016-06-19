@@ -40,4 +40,4 @@ If you have a case that is not covered in the style guide, simply do your best t
 
 ## Communication
 
-**Thanks for contributing!**
+**Thanks for contributing! :party:**
