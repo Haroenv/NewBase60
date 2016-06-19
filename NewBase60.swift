@@ -1,5 +1,27 @@
 import Foundation
 
+
+/**
+ * Tantek Çelik's NewBase60.
+ *     http://tantek.com/
+ *     http://tantek.pbworks.com/NewBase60
+ *
+ * Lightly translated from the original CASSIS to CommonsJS- &
+ * Node.js-aware JavaScript by Edward O'Connor <hober0@gmail.com>.
+ *
+ * Then translated once more to a more usable Node.js module
+ * that implements Date conversion similar to that of Shane Becker's
+ * NewBase60 ( https://github.com/veganstraightedge/new_base_60 ).
+ * NewBase60.js by Michael Owens <mk@mowens.com>. Published on NPM
+ * as newbase60 ( https://npmjs.org/package/newbase60 ).
+ *
+ * Translated to Swift by Haroen Viaene and published on CocoaPods,
+ * Cartage and Swift Package Manager as Haroenv/NewBase60. On GitHub
+ * as https://github.com/Haroenv/NewBase60
+ *
+ * Released under CC BY-SA 3.0:
+ *           http://creativecommons.org/licenses/by-sa/3.0/
+ */
 public struct NumToBase60 {
 
     //: Converts a Base 10 Integer into Sexagesimal (Base 60) String
