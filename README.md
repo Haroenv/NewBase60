@@ -3,7 +3,7 @@
 [![CI Status](http://img.shields.io/travis/Haroenv/NewBase60.svg?style=flat)](https://travis-ci.org/Haroenv/NewBase60)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/NewBase60.svg?style=flat)](http://cocoapods.org/pods/NewBase60)
-[![Platform](https://img.shields.io/cocoapods/p/NewBase60.svg?style=flat)](http://cocoapods.org/pods/NewBase60)
+
 
 ## Usage
 
@@ -11,9 +11,12 @@
 import NumToBase60
 
 NumToBase60.IntToSxg(123)
-NumToBase60.IntToSxgF(12312,)
-NumToBase60.SxgToInt
-NumToBase60.SxgToDate
+NumToBase60.IntToSxgF(123123, formatLength: 4)
+NumToBase60.SxgToInt("f1ex")
+NumToBase60.DateToSxg(NSDate(timeIntervalSinceReferenceDate: 0))
+NumToBase60.DateToSxgF(NSDate(timeIntervalSinceReferenceDate: 0), formatLength: 6)
+NumToBase60.SxgToDate("38i")
+NumToBase60.SxgToISO("37j")
 ```
 
 ## Requirements

@@ -1,22 +1,22 @@
 import Foundation
 
 
-/** 
- Tantek Çelik's NewBase60.       
- http://tantek.com/       
- http://tantek.pbworks.com/NewBase60     
- Lightly translated from the original CASSIS to CommonsJS- &   
- Node.js-aware JavaScript by Edward O'Connor <hober0@gmail.com>.     
- 
- Then translated once more to a more usable Node.js module   
- that implements Date conversion similar to that of Shane Becker's   
- NewBase60 ( https://github.com/veganstraightedge/new_base_60 ).   
- NewBase60.js by Michael Owens <mk@mowens.com>. Published on NPM   
- as newbase60 ( https://npmjs.org/package/newbase60 ).     
- 
- Translated to Swift by Haroen Viaene on GitHub as 
- https://github.com/Haroenv/NewBase60     
- 
+/**
+ Tantek Çelik's NewBase60.
+ http://tantek.com/
+ http://tantek.pbworks.com/NewBase60
+ Lightly translated from the original CASSIS to CommonsJS- &
+ Node.js-aware JavaScript by Edward O'Connor <hober0@gmail.com>.
+
+ Then translated once more to a more usable Node.js module
+ that implements Date conversion similar to that of Shane Becker's
+ NewBase60 ( https://github.com/veganstraightedge/new_base_60 ).
+ NewBase60.js by Michael Owens <mk@mowens.com>. Published on NPM
+ as newbase60 ( https://npmjs.org/package/newbase60 ).
+
+ Translated to Swift by Haroen Viaene on GitHub as
+ https://github.com/Haroenv/NewBase60
+
  Released under MIT
  */
 public struct NumToBase60 {
