@@ -10,5 +10,3 @@ script:
     - make test
 after_script:
     - script/cert --remove
-notifications:
-  email: true
