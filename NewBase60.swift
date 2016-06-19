@@ -29,19 +29,19 @@ public func IntToSxgF(num: Int, formatLength: Int = 0)->String {
 public func SxgToInt(sxg: String)->Int {
     var num: Int = 0;
 
-    
+
     // iterate from first to last char of s
     for var c in sxg.characters {
-        
+
         var i: Int = 0;
-        
+
         if (c>="0" && c<="9") {
             i = "\(c)".unicodeScalars.first - 48;
         }
         else if (c>=65 && c<=72) {
             c-=55;
         }
-            
+
         // typo capital I,
         // lowercase l to 1
         else if (c==73 || c==108) {
@@ -50,13 +50,13 @@ public func SxgToInt(sxg: String)->Int {
         else if (c>=74 && c<=78) {
             c-=56;
         }
-            
+
         // error correct typo capital O to 0
         else if (c==79) { c=0; }
         else if (c>=80 && c<=90) {
             c-=57;
         }
-        
+
         // underscore
         else if (c==95) { c=34; }
         else if (c>=97 && c<=107) {
@@ -65,7 +65,7 @@ public func SxgToInt(sxg: String)->Int {
         else if (c>=109 && c<=122) {
             c-=63;
         }
-        
+
         // treat all other noise as 0
         else { c = 0; }
         num = (60 * num) + i;
