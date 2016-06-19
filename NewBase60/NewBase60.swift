@@ -1,30 +1,27 @@
 import Foundation
 
 
-/**
- * Tantek Çelik's NewBase60.
- *     http://tantek.com/
- *     http://tantek.pbworks.com/NewBase60
- *
- * Lightly translated from the original CASSIS to CommonsJS- &
- * Node.js-aware JavaScript by Edward O'Connor <hober0@gmail.com>.
- *
- * Then translated once more to a more usable Node.js module
- * that implements Date conversion similar to that of Shane Becker's
- * NewBase60 ( https://github.com/veganstraightedge/new_base_60 ).
- * NewBase60.js by Michael Owens <mk@mowens.com>. Published on NPM
- * as newbase60 ( https://npmjs.org/package/newbase60 ).
- *
- * Translated to Swift by Haroen Viaene and published on CocoaPods,
- * Cartage and Swift Package Manager as Haroenv/NewBase60. On GitHub
- * as https://github.com/Haroenv/NewBase60
- *
- * Released under CC BY-SA 3.0:
- *           http://creativecommons.org/licenses/by-sa/3.0/
+/** 
+ Tantek Çelik's NewBase60.       
+ http://tantek.com/       
+ http://tantek.pbworks.com/NewBase60     
+ Lightly translated from the original CASSIS to CommonsJS- &   
+ Node.js-aware JavaScript by Edward O'Connor <hober0@gmail.com>.     
+ 
+ Then translated once more to a more usable Node.js module   
+ that implements Date conversion similar to that of Shane Becker's   
+ NewBase60 ( https://github.com/veganstraightedge/new_base_60 ).   
+ NewBase60.js by Michael Owens <mk@mowens.com>. Published on NPM   
+ as newbase60 ( https://npmjs.org/package/newbase60 ).     
+ 
+ Translated to Swift by Haroen Viaene on GitHub as 
+ https://github.com/Haroenv/NewBase60     
+ 
+ Released under MIT
  */
 public struct NumToBase60 {
 
-    //: Converts a Base 10 Integer into Sexagesimal (Base 60) String
+    /// Converts a Base 10 Integer into Sexagesimal (Base 60) String
     public static func IntToSxg(num: Int)->String {
         var num = num
         var sxg = ""
@@ -40,7 +37,7 @@ public struct NumToBase60 {
         return sxg
     }
 
-    //: Converts a Base 10 Integer to Sexagesimal (Base 60) String of a fixed minimum length
+    /// Converts a Base 10 Integer to Sexagesimal (Base 60) String of a fixed minimum length
     public static func IntToSxgF(num: Int, formatLength: Int = 0)->String {
         var sxg: String = IntToSxg(num)
         var zeroesToAdd = formatLength - sxg.characters.count
@@ -51,7 +48,7 @@ public struct NumToBase60 {
         return sxg
     }
 
-    //: Converts a Sexagesimal (Base 60) String into a Base 10 Integer
+    /// Converts a Sexagesimal (Base 60) String into a Base 10 Integer
     public static func SxgToInt(sxg: String)->Int {
         var num: Int = 0
 
@@ -61,8 +58,6 @@ public struct NumToBase60 {
         for var c: UInt8 in sxg.utf8 {
 
             var i: UInt8 = 0
-
-            c
 
             if (c>=48 && c<=57) {
                 i = c - 48
@@ -102,7 +97,7 @@ public struct NumToBase60 {
         return num
     }
 
-    //: Converts a NSDate to a Sexageismal (Base 60) String with formatting
+    /// Converts a NSDate to a Sexageismal (Base 60) String with formatting
     public static func DateToSxg(date: NSDate)->String {
         let sinceEpoch = date.timeIntervalSince1970
         let epochDays = Int(floor(sinceEpoch / (60 * 60 * 24)))
@@ -118,7 +113,7 @@ public struct NumToBase60 {
         return IntToSxgF(epochDays, formatLength: formatLength)
     }
 
-    //: Converts a Sexagesimal (Base 60) String into a NSDate
+    /// Converts a Sexagesimal (Base 60) String into a NSDate
     public static func SxgToDate(sxg: String)->NSDate {
         let num = SxgToInt(sxg)
         let interval: NSTimeInterval = NSTimeInterval(num * 60 * 60 * 24)
@@ -126,7 +121,7 @@ public struct NumToBase60 {
         return NSDate(timeIntervalSince1970: interval)
     }
 
-    //: Converts a Sexageismal (Base 60) String into a ISO-8601 Datetime String
+    /// Converts a Sexageismal (Base 60) String into a ISO-8601 Datetime String
     public static func SxgToISO(sxg: String)->String {
         let date: NSDate = SxgToDate(sxg)
 
@@ -141,13 +136,3 @@ public struct NumToBase60 {
     }
 
 }
-
-NumToBase60.IntToSxg(8645997)
-
-NumToBase60.SxgToInt("flex")
-
-NumToBase60.DateToSxg(NSDate())
-
-NumToBase60.SxgToDate("4hr")
-
-NumToBase60.SxgToISO("4hr")
