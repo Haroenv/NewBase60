@@ -151,7 +151,7 @@ public struct NumToBase60 {
         let dateFormatter = NSDateFormatter()
         let enUSPosixLocale = NSLocale(localeIdentifier: "en_US_POSIX")
         dateFormatter.locale = enUSPosixLocale
-        dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC");
+        dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
 
         let iso8601String = dateFormatter.stringFromDate(date)
