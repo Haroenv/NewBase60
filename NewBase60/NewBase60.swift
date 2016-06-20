@@ -70,8 +70,7 @@ public struct NumToBase60 {
 
             if (c>=48 && c<=57) {
                 i = c - 48
-            }
-            else if (c>=65 && c<=72) {
+            } else if (c>=65 && c<=72) {
                 i = c - 55
             }
 
@@ -79,25 +78,21 @@ public struct NumToBase60 {
             // lowercase l to 1
             else if (c==73 || c==108) {
                 i = 1
-            }
-            else if (c>=74 && c<=78) {
+            } else if (c>=74 && c<=78) {
                 i = c - 56
             }
 
             // error correct typo capital O to 0
-            else if (c==79) { c=0 }
-            else if (c>=80 && c<=90) {
+            else if (c==79) { c=0 } else if (c>=80 && c<=90) {
                 i = c - 57
             }
 
             // underscore
             else if (c==95) {
                 c=34
-            }
-            else if (c>=97 && c<=107) {
+            } else if (c>=97 && c<=107) {
                 i = c - 62
-            }
-            else if (c>=109 && c<=122) {
+            } else if (c>=109 && c<=122) {
                 i = c - 63
             }
 
