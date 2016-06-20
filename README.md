@@ -11,13 +11,13 @@ A port of Tantek Çelik's NewBase60 in Swift
 ```swift
 import NumToBase60
 
-NumToBase60.IntToSxg(123)
-NumToBase60.IntToSxgF(123123, formatLength: 4)
-NumToBase60.SxgToInt("f1ex")
-NumToBase60.DateToSxg(NSDate(timeIntervalSinceReferenceDate: 0))
-NumToBase60.DateToSxgF(NSDate(timeIntervalSinceReferenceDate: 0), formatLength: 6)
-NumToBase60.SxgToDate("38i")
-NumToBase60.SxgToISO("37j")
+NumToBase60.IntToSxg(123) // 23
+NumToBase60.IntToSxgF(123123, formatLength: 4) // 0_C3
+NumToBase60.SxgToInt("f1ex") // 8645997
+NumToBase60.DateToSxg(NSDate(timeIntervalSinceReferenceDate: 0)) // 38i
+NumToBase60.DateToSxgF(NSDate(timeIntervalSinceReferenceDate: 0), formatLength: 6) // 00038i
+NumToBase60.SxgToDate("38i") // 01 Jan 2001 01:00"
+NumToBase60.SxgToISO("37j") // 2000-11-03T01:00:00+01:00
 ```
 
 ## Installation
