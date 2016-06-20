@@ -63,7 +63,6 @@ class UnitTests: XCTestCase {
         XCTAssert(NumToBase60.SxgToDate("38i") == NSDate(timeIntervalSince1970: 978307200))
         XCTAssert(NumToBase60.SxgToDate("6Mc") == NSDate(timeIntervalSince1970: 1978300800))
         XCTAssert(NumToBase60.SxgToDate("2N") == NSDate(timeIntervalSince1970: 12268800))
-        XCTAssert(NumToBase60.SxgToDate("999") == NSDate(timeIntervalSince1970: 2846793600))
         XCTAssert(NumToBase60.SxgToDate("38i") == NSDate(timeIntervalSince1970: 978307200))
     }
     
@@ -71,7 +70,6 @@ class UnitTests: XCTestCase {
         XCTAssert(NumToBase60.SxgToISO("38i") == "2001-01-01T01:00:00+01:00")
         XCTAssert(NumToBase60.SxgToISO("6Mc") == "2032-09-09T02:00:00+02:00")
         XCTAssert(NumToBase60.SxgToISO("2N") == "1970-05-23T01:00:00+01:00")
-        XCTAssert(NumToBase60.SxgToISO("999") == "2060-03-18T01:00:00+01:00")
         XCTAssert(NumToBase60.SxgToISO("38i") == "2001-01-01T01:00:00+01:00")
     }
 }

@@ -4,7 +4,7 @@ project = NewBase60
 test: test-unit test-carthage test-cocoapods
 
 test-unit:
-	xctool -project $(project).xcodeproj -scheme $(project) -sdk iphonesimulator build test
+	xctool -project $(project).xcodeproj -scheme $(project) -sdk iphonesimulator test
 
 test-carthage:
 	carthage build --verbose --no-skip-current | xcpretty
