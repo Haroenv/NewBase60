@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = "NewBase60"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.license          = "MIT"
   s.summary          = "A port of Tantek Çelik's NewBase60 in Swift"
   s.homepage         = "https://github.com/Haroenv/NewBase60"
