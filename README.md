@@ -1,8 +1,9 @@
 # NewBase60
 
-[![CI Status](http://img.shields.io/travis/Haroenv/NewBase60.svg?style=flat)](https://travis-ci.org/Haroenv/NewBase60)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Version](https://img.shields.io/cocoapods/v/NewBase60.svg?style=flat)](http://cocoapods.org/pods/NewBase60)
+[![CI Status](http://img.shields.io/travis/Haroenv/NewBase60.svg?style=flat-square)](https://travis-ci.org/Haroenv/NewBase60)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
+[![Version](https://img.shields.io/cocoapods/v/NewBase60.svg?style=flat-square)](http://cocoapods.org/pods/NewBase60)
+[![Carthage compatible](https://img.shields.io/badge/SPM-compatible-ffac45.svg?style=flat-square)](https://github.com/apple/swift-package-manager)
 
 A port of Tantek Çelik's NewBase60 in Swift
 
@@ -37,6 +38,18 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "NewBase60"
+```
+
+### Swift Package Manager
+
+Add this as a dependency via [Swift Package Manager](https://swift.org/package-manager/) to your `Package.swift`
+
+```swift
+let package = Package(
+    dependencies: [
+        .Package(url: "https://github.com/Haroenv/NewBase60.git", majorVersion: 0),
+    ]
+)
 ```
 
 ## Author
